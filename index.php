@@ -19,7 +19,7 @@ include __DIR__.'/staff_db.php';
                 <li>Nome e Cognome: <?php echo $magazziniere->nome ." ". $magazziniere->cognome ?> </li>
                 <li>Eta: <?php echo $magazziniere->eta;
                         try{
-                            echo $magazziniere->controlloEta($magazziniere->eta);
+                             $magazziniere->controlloEta($magazziniere->eta);
                         }catch (Exception $e){
                             echo "  " . $e->getMessage();
                        }
@@ -38,7 +38,7 @@ include __DIR__.'/staff_db.php';
                 <li>Nome e Cognome: <?php echo $cassiere->nome . " ". $cassiere->cognome ?> </li>
                 <li>Eta: <?php echo $cassiere->eta;
                 try{
-                    echo $cassiere->controlloEta($cassiere->eta);
+                    $cassiere->controlloEta($cassiere->eta);
                 } catch (Exception $e){
                     echo " Attenzione  " . $e->getMessage();
                 }
@@ -47,7 +47,7 @@ include __DIR__.'/staff_db.php';
                 <li>Id dipendente: <?php echo $cassiere->id ?></li>
                 <li>Numero Cassa: <?php echo $cassiere->numCassa;
                     try{
-                        echo $cassiere->controlloCassa($cassiere->numCassa);
+                         $cassiere->controlloCassa($cassiere->numCassa);
                     } catch(Exception $e){
                         echo " Attenzione  " . $e->getMessage();
                     }
